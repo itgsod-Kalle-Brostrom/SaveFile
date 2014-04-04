@@ -15,7 +15,7 @@ describe 'saving a rectangle' do
   it 'should print the rectangle to the command prompt' do
     ts = TerminalSaver.new
     ts.save({type: 'Rectangle', width:4, height: 3, area: 12, colour: 'red'})
-    correct_output = "Rectangle:\n  width: 4\n  height: 3\n  area: 12\n  colour: red"
+    correct_output = "Rectangle:\n,  width: 4\n,  height: 3\n,  area: 12\n,  colour: red"
     #STDOUT.should_receive(:print).with(correct_output)
     expect($stdout.string).to match(correct_output)
   end
